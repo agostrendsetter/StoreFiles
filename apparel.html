@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<title>Trendsetter</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+<style>
+a:link, a:visited {
+  background-color: purple;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+</style>
+<body class="w3-content" style="max-width:3000px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+<h3 style="color:purple"class="w3-wide"><b>Welcome<br>To Agos Trendsetter</b></h3>
+ </div>
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Trendsetter Home
+    </a>
+    <a href="file:///C:/store/page.html" class="w3-bar-item w3-button">Clothing</a>
+    <a href="file:///C:/store/jewellery.html" class="w3-bar-item w3-button">Jewellery</a>
+    <a href="file:///C:/store/SterlingSilver.html" class="w3-bar-item w3-button">Sterling Silver Jewellery</a>
+    <a href="file:///C:/store/shoes.html" class="w3-bar-item w3-button">Shoes</a>
+    <a href="file:///C:/store/edit.html" class="w3-bar-item w3-button">side bags</a>
+    <a href="file:///C:/store/watch.html" class="w3-bar-item w3-button">Watches</a>
+    <a href="file:///C:/store/edit.html" class="w3-bar-item w3-button">Affordable Watches</a>
+  </div>
+  <a href="file:///C:/store/validate/index.html" class="w3-bar-item w3-button w3-padding"><b>ETHVALIDATE</b></a> 
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">News</a> 
+  <a href="file:///C:/store/comingsoon.html"  class="w3-bar-item w3-button w3-padding">Radio South Africa</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">Agos Trendsetter</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left"><b>Trendsetter Home<b></p>
+    <p class="w3-right">
+      <a href="file:///C:/store/PageUnderConstruction.html" class="fa fa-play"></a>
+      <a href="" class="fa fa-instagram"></a>
+      <a href="" class="fa fa-twitter"></a>
+      <a href="file:///C:/store/PageUnderConstruction.html" class="fa fa-picture-o"></a>
+      <a href="https://agosagstoken.blogspot.com" class="fa fa-info"></a>
+      <a href="file:///C:/store/homepage.html" class="fa fa-home w3-margin-right"></a>
+      <a href="https://www.google.com/search?q=agos+ags&oq=agos+&aqs=chrome.5.69i57j69i60j69i61l2j69i65j69i59.5549j0j1&sourceid=chrome&ie=UTF-8" class="fa fa-google"></a>
+    </p>
+  </header>
+    <coingecko-coin-price-marquee-widget  coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" background-color="#ffffff" locale="en">
+    </coingecko-coin-price-marquee-widget>
+
+  <!-- Image header -->
+  <div class="w3-display-container w3-container">
+   <div class="mySlide">
+        <img src="C:\store\ma sis\b3079739.jpg" style="width:100%">
+      </div>
+      <div class="mySlide">
+        <img src="C:\store\ma sis\8648038e.jpeg" style="width:100%">
+      </div>
+      <div class="mySlide">
+        <img src="C:\store\ma sis\2af58dae.jpg" style="width:100%">
+      </div>
+      <div class="mySlide">
+        <img src="C:\store\ma sis\aab993b9.jpeg" style="width:100%">
+      </div>
+    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+      <h1 class="w3-jumbo w3-hide-small"></h1>
+      <h1 class="w3-hide-large w3-hide-medium"></h1>
+      <h1 class="w3-hide-small"></h1>
+      <p><a href="#jeans" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
+    </div>
+  </div>
+  <div class="w3-container w3-text-grey" id="jeans">
+    <p></p>
+  </div>
+
+  <!-- Product grid -->
+  <div class="w3-row">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\A B O\jy.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>ABO 1 <br><b>$43.50</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\A B O\kl.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>ABO 2 <br><b>$42</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="C:\store\A B O\i.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+          </div>
+        </div>
+        <p>ABO 4<br><b>$42</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\A B O\n.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>ABO 3<br><b>$48.50</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\body warmer-tactical vest\lp.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>warmer inter<br><b>$30.50</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="C:\store\body warmer-tactical vest\w.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">Sale</span>
+          <div class="w3-display-middle w3-display-hover">
+            <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+          </div>
+        </div>
+        <p>Run sweater warmer<br><b class="w3-text-red">$34</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\body warmer-tactical vest\t.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>warmer swart<br><b>$39</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\body warmer-tactical vest\a.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>warmers boost<br><b>$27.70</b></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\body warmer-tactical vest\b.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>kill out movement warmer<br><b>$30</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\Kicks(xpress)\a.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>kick flow<br><b>$49.40</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="C:\store\Kicks(xpress)\b.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+          </div>
+        </div>
+        <p>air kick<br><b>$54.75</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\Kicks(xpress)\c.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Wash rage kick<br><b>$40.50</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\Kicks(xpress)\e.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>tie up kick<br><b>$63.50</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="C:\store\Kicks(xpress)\d.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">Sale</span>
+          <div class="w3-display-middle w3-display-hover">
+            <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+          </div>
+        </div>
+        <p>brizz foot wear<br><b class="w3-text-red">$38</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\Kicks(xpress)\f.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>due kick<br><b>$70.80</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\Kicks(xpress)\g.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Nick<br><b>$67</b></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\ma sis\2af58dae.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Nike x Off White Air Max 180 OG <br><b>$250</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\ma sis\1dec944d.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Gucci shoes<br><b>$650</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="C:\store\ma sis\8648038e.jpeg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+          </div>
+        </div>
+        <p>Nike x Off White Air Jordan 1<br><b>$3,000</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\ma sis\aab993b9.jpeg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>OFF WHITE NIKE AIR<br><b>$450</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\ma sis\b3079739.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Nike MAG Back To The Future<br><b>$700</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="C:\store\ma sis\fedfe04d.png" style="width:100%">
+          <span class="w3-tag w3-display-topleft">Sale</span>
+          <div class="w3-display-middle w3-display-hover">
+            <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+          </div>
+        </div>
+        <p>OFF white air  force<br><b class="w3-text-red">$400</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\OEMpants\a.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>connet pants<br><b>$35</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\OEMpants\b.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Ride pants wear<br><b>$53</b></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\OEMpants\c.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Drip crop<br><b>$32</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\OEMpants\d.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>What move crop <br><b>$24.99</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\OEMpants\e.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Flawless crop <br><b>$14.99</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\OEMpants\f.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>polo neck crop<br><b>$24.99</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\Jackets-sweaters\a.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Drip swim wear<br><b>$29</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="C:\store\Jackets-sweaters\b.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Simple test dress<br><b>$43.41</b></p>
+      </div>
+    </div>
+
+  
+<script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+<script>
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlide");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 1500);    
+}
+</script>
+
+</body>
+</html>
