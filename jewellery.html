@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<title>Jewellery</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+
+</style>
+<style>
+a:link, a:visited {
+  background-color: yellow;
+  color: black;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+</style>
+<style>
+body {
+  background-color: yellow;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+</style>
+</head>
+
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 style="color:black"class="w3-wide"><b>Welcome<br>To<br><div class="mySlides">
+        <img src="file:///C:/store/images/Jewels/1.jpg.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="file:///C:/store/images/Jewels/2.jpg.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="file:///C:/store/images/Jewels/3.jpg.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="file:///C:/store/images/Jewels/39.jpg.jpg" style="width:100%">
+       </div>
+      <div class="mySlides">
+        <img src="file:///C:/store/images/Jewels/38.jpg.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="file:///C:/store/images/Jewels/5.jpg.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="file:///C:/store/images/Jewels/7.jpg.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="file:///C:/store/images/Jewels/9.jpg.jpg" style="width:100%">
+      </div>Agos Trendsetter</b></h3>
+  </div>
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Jewellery
+    </a>
+    <a href="file:///C:/store/SterlingSilver.html" class="w3-bar-item w3-button">Sterling Silver Jewellery</a>
+    <a href="file:///C:/store/watch.html" class="w3-bar-item w3-button">Watches</a>
+  </div>
+  <a href="file:///C:/store/validate/index.html" class="w3-bar-item w3-button w3-padding"><b>ETHVALIDATE</b></a> 
+  <a href="https://agosagstoken.blogspot.com" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Blog</a> 
+  <a href="file:///C:/store/comingsoon.html"  class="w3-bar-item w3-button w3-padding">Radio South Africa</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">Agos Trendsetter</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left">Jewellery</p>
+    <p class="w3-right">
+      <a href="file:///C:/store/edit.html" class="fa fa-play"></a>
+      <a href="" class="fa fa-instagram"></a>
+      <a href="" class="fa fa-twitter"></a>
+      <a href="file:///C:/store/PageUnderConstruction.html" class="fa fa-picture-o"></a>
+      <a href="https://agosagstoken.blogspot.com" class="fa fa-info"></a>
+      <a href="file:///C:/store/homepage.html" class="fa fa-home w3-margin-right"></a>
+      <a href="file:///c:/store/apparelPlayVid.html" class="fa fa-shopping-cart w3-margin-right"></a>
+      <a href="https://www.google.com/search?q=agos+ags&oq=agos+&aqs=chrome.5.69i57j69i60j69i61l2j69i65j69i59.5549j0j1&sourceid=chrome&ie=UTF-8" class="fa fa-google"></a>
+    </p>
+  </header>
+    <coingecko-coin-price-marquee-widget  coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" background-color="#ffffff" locale="en">
+    </coingecko-coin-price-marquee-widget>
+
+ <!-- Product grid -->
+<body class="w3-content" style="max-width:3000px">
+  <div class="w3-row">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/1.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+      </div>
+        <p>Cuban link bracelet<br><b>$147</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/2.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Africa chain<br><b>$75.99</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="file:///C:/store/images/Jewels/3.jpg.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+          </div>
+        </div>
+        <p>Plug chain <br><b>$80</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/4.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Rose gold bracelet tennis chains<br><b>$240.50</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/5.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        <p>Lock bust bracelet<br><b>$155.50</b></p>
+        </div>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="file:///C:/store/images/Jewels/6.jpg.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">Sale</span>
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Cuban bracelet rose gold, gold,and sterling sliver 925<br><b class="w3-text-red">$120</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/7.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Tennis bracelet<br><b>$65</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/8.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Tennis chain<br><b>$75</b></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product grid -->
+  <div class="w3-row">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/9.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Cuban bracelet and chain gold and sterling sliver 925<br><b>$550</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/10.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Mice twist chain<br><b>$64</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="file:///C:/store/images/Jewels/11.jpg.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+          </div>
+        </div>
+        <p>Africa chain gold<br><b>$100.55</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/12.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Cuban bracelet plain simple ice<br><b>$80.50</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/13.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Versace chain sterling sliver 925<br><b>$110.41</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="file:///C:/store/images/Jewels/14.jpg.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">Sale</span>
+          <div class="w3-display-middle w3-display-hover">
+            <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target=_blank">Buy now</a>
+          </div>
+        </div>
+        <p>Versace chain gold<br><b class="w3-text-red">$110.41</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/15.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>sterling sliver 925 ear rings<br><b>$60</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/16.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>ice ear rings on gold<br><b>$58.58</b></p>
+      </div>
+    </div>
+  </div>
+  <!-- Product grid -->
+  <div class="w3-row">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/17.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Mice twist chain<br><b>$65</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/18.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Ice block <br><b>$52</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="file:///C:/store/images/Jewels/19.jpg.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+          </div>
+        </div>
+        <p>Cuban link chain mix<br><b>$380.85</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/20.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>stain less on gold chain<br><b>$70.50</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/21.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>gold and sterling sliver 925 rings <br><b>$63.50</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="file:///C:/store/images/Jewels/22.jpg.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">Sale</span>
+          <div class="w3-display-middle w3-display-hover">
+            <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+          </div>
+        </div>
+        <p>Jesus piece<br><b class="w3-text-red">$77</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/23.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Royal ring<br><b>$74</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/24.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Bins on bins black,rose,goldand sterling sliver 925<br><b>$55.58</b></p>
+      </div>
+    </div>
+  </div>
+  <!-- Product grid -->4
+  <div class="w3-row">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/25.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Sterling sliver 925 bruce ring<br><b>$70.70</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/26.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Stering slver 925 bruce 2<br><b>$70.55</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="file:///C:/store/images/Jewels/27.jpg.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+          </div>
+        </div>
+        <p>Sterling sliver 925 bruce 3<br><b>$70.55</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/28.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Stering sliver 925 bruce 4<br><b>$70.50</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/29.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Faro chain<br><b>$77</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="file:///C:/store/images/Jewels/30.jpg.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">Sale</span>
+          <div class="w3-display-middle w3-display-hover">
+            <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+          </div>
+        </div>
+        <p>Cuban link rose,gold,sterling sliver 925 cz<br><b class="w3-text-red">$130.57</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/31.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Block ship bracelets<br><b>$57</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/32.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Fly now chain<br><b>$54</b></p>
+      </div>
+    </div>
+  </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/33.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>sterling sliver 925 cuban link<br><b>$311</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/34.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Sterling sliver 925 cuban link death jump<br><b>$800</b></p>
+      </div>
+    </div>
+  </div>
+    
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/35.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Set my neck <br><b>$740</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/41.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Classic cuban link<br><b>$110</b></p>
+      </div>
+    </div>
+  </div>
+    
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/37.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Colour out cuban link chain and bracelet<br><b>$550</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="file:///C:/store/images/Jewels/38.jpg.jpg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+          <a href="https://forms.gle/MoLoUJQ5tHFam54D9" target="_blank">Buy now</a>
+        </div>
+        </div>
+        <p>Colour out cuban link bracelet<br><b>$210</b></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+<script>
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 1500);    
+}
+</script>
+</html>
