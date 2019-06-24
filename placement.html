@@ -1,0 +1,101 @@
+<!doctype html>
+<title>Example</title>
+<style>
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row;
+    max-height: 100vh;
+  }
+  .cards img {
+    margin: 10px;
+    border: 3px solid #000;
+    box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+    max-width: 23vw;
+  }
+ .myForm {
+    display: grid;
+    grid-template-columns: [labels] auto [controls] 1fr;
+    grid-auto-flow: row;
+    grid-gap: .8em;
+    background-color: red;
+    padding: 1.2em;
+  }
+  .myForm > label  {
+    grid-column: labels;
+    grid-row: auto;
+  }
+  .myForm > input,
+  .myForm > textarea,
+  .myForm > button {
+    grid-column: controls;
+    grid-row: auto;
+    border: none;
+    padding: 1em;
+  }
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "nav article ads"
+    "footer footer footer";
+  grid-template-rows: 60px 1fr 60px;
+  grid-template-columns: 20% 1fr 15%;
+  grid-gap: 2px;
+  height: 100vh;
+  margin: 0;
+  }
+header, article, nav, div {
+  padding: 20px;
+  background: blue;
+}
+
+#pageHeader {
+  grid-area: header;
+  color: white;
+}
+#pageFooter {
+  grid-area: footer;
+  color: white;
+  
+}
+#mainArticle { 
+  grid-area: article;
+  color: white;      
+  }
+#mainNav { 
+  grid-area: nav;
+  color: white 
+  }
+#siteAds { 
+  grid-area: ads;
+  color: white; 
+  }
+</style>
+<body>
+  <header id="pageHeader">Header</header>
+  <article id="mainArticle"><main class="cards">
+  <img src="C:\Users\Public\css files\01.jpg" width="200" height="200" alt="Sample photo">
+  <img src="C:\Users\Public\css files\02.jpg" width="200" height="200" alt="Sample photo">
+  <img src="C:\Users\Public\css files\10.jpg" width="200" height="200"alt="Sample photo">
+  <img src="C:\Users\Public\css files\11.jpg" width="200" height="200"alt="Sample photo">
+  <img src="C:\Users\Public\css files\08.jpg" width="200" height="200"alt="Sample photo">
+  <img src="C:\Users\Public\css files\09.jpg" width="200" height="200"alt="Sample photo">
+  <img src="C:\Users\Public\css files\08.jpg" width="200" height="200"alt="Sample photo">
+  <img src="C:\Users\Public\css files\09.jpg" width="200" height="200"alt="Sample photo">
+</main>
+</article>
+  <nav id="mainNav">Nav</nav>
+  <div id="siteAds">Ads</div>
+  <footer id="pageFooter"><form class="myForm">
+  <label for="customer_name">Name </label>
+  <input type="text" name="customer_name" id="customer_name" required>
+  <label for="email_address">Email </label>
+  <input type="email" name="email_address" id="email_address">
+  <label for="comments">Comments</label>
+  <textarea name="comments" id="comments" maxlength="500"></textarea>
+  <button>Submit</button>
+</form>
+</footer>
+</body>
