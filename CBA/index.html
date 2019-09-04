@@ -6,21 +6,21 @@
 <body>
 
 <script type="text/javascript">
-function CheckPassword() {
-  var username=document.login.username.value;
-  var password=document.login.password.value;
-  location.href = username + password+'.htm';
+function Checkapikey() {
+  var address=document.login.address.value;
+  var apikey=document.login.apikey.value;
+  location.href = address + apikey+'.htm';
 }
 </script>
 
 <form method="post" action="ingen_javascript.htm" 
-  onsubmit="CheckPassword();return false;" name="login">
+  onsubmit="Checkapikey();return false;" name="login">
 <pre>
-Username: <input type="text" name="username">
-Password: <input type="password" name="password">
+address: <input type="text" name="address">
+apikey: <input type="apikey" name="apikey">
 </pre>
-<input type="submit" value="log på" 
-  onclick="CheckPassword();return false;">
+<input type="submit" value="log in" 
+  onclick="Checkapikey();return false;">
 </form>
 
 </body>
