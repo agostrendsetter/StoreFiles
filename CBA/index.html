@@ -1,152 +1,106 @@
+<!--
+  Copyright (c) 2011 Google Inc.
+  Licensed under the Apache License, Version 2.0 (the "License"); you may not
+  use this file except in compliance with the License. You may obtain a copy of
+  the License at
+  http://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+  License for the specific language governing permissions and limitations under
+  the License.
+  To run this sample, set apiKey to your application's API key and clientId to
+  your application's OAuth 2.0 client ID. They can be generated at:
+    https://console.developers.google.com/apis/credentials?project=_
+  Then, add a JavaScript origin to the client that corresponds to the domain
+  where you will be running the script. Finally, activate the People API at:
+    https://console.developers.google.com/apis/library?project=_
+-->
+<!DOCTYPE html>
 <html>
-<head>
-	<title>login</title>
-	<script type="text/javascript" >
-		function id(id){
-			return document.getElementById(id);
-		}
-		function setCookie(c_name,value,expiredays){
-			var exdate=new Date();
-			exdate.setDate(exdate.getDate()+expiredays);
-			document.cookie=c_name+ "=" +escape(value)+
-			((expiredays==null) ? "" : ";expires="+exdate.toUTCString());
-		}
-		function login(form){
-			if(form.username.value == ""){
-				id("note1").textContent="please enter the username";
-				form.username.focus();
-				return;
-			}
-			else
-				id("note1").textContent="";
-			if(form.password.value == ""){
-				id("note2").textContent="please enter the password";
-				form.password.focus();
-				return;
-			}
-			else
-				id("note2").textContent="";
-			
-			var ajax=new XMLHttpRequest();
-			ajax.onreadystatechange = function(){
-				if(this.readyState == 4 && this.status == 200){
-					var check = this.responseText;
-					alert(check);
-					if(check == "true"){
-						setCookie('username',form.username.value,10);
-						location.replace("index.html");
-					}
-					else if(check == "false"){
-						id("response").textContent="wrong username or password";
-						return;
-					}
-					else{
-						id("response").textContent="...error";		
-						return;
-					}
-				}
-			}
-			ajax.open("POST","login.php");
-			ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-			ajax.send("username="+form.username.value+"&password="+form.password.value);
-		}
-		
-	</script>
-</head>
-<body>
-	<form>
-	<fieldset>
-	<legend>login</legend>
-	username:<input type="text" name="username" /><span id="note1"></span><br />
-	password:<input type="password" name="password" /><span id="note2"></span><br />
-	<input type="button" value="login" onclick="login(this.form)"/>
-	<p id="response"></p>
-	</fieldset>
-	</form>
-	<a href="register.html">register</a>
-	<a href="index.html">index</a>
-</body>
-</html>
- register.html
-<html>
-<head>
-	<title>register</title>
-	<script type="text/javascript">
-		function id(id){
-			return document.getElementById(id);
-		}
-		function setCookie(c_name,value,expiredays){
-			var exdate=new Date();
-			exdate.setDate(exdate.getDate()+expiredays);
-			document.cookie=c_name+ "=" +escape(value)+
-			((expiredays==null) ? "" : ";expires="+exdate.toUTCString());
-		}
-		function checkpw(form){
-			if(form.password.value != form.chkpasswd.value){
-				id("note3").textContent="password and checkpassword not same";
-				form.username.focus();
-				return;
-			}
-			else
-				id("note3").textContent="";
-		}
-		function register(form){
-			if(form.username.value == ""){
-				id("note1").textContent="please enter the username";
-				form.username.focus();
-				return;
-			}
-			else
-				id("note1").textContent="";
-			if(form.password.value == ""){
-				id("note2").textContent="please enter the password";
-				form.password.focus();
-				return;
-			}
-			else
-				id("note1").textContent="";
-			
-			var ajax=new XMLHttpRequest();
-			ajax.onreadystatechange = function(){
-				if(this.readyState == 4 && this.status ==200){
-					var check = this.responseText;
-					if(check == "true"){
-						setCookie('username',form.username.value,10);
-						alert("success");
-						location.replace("index.html");
-					}
-					else if(check == "same"){
-						id("check").textContent="this id has been used";
-						return;
-					}
-					else if(check == "false"){
-						id("check").textContent="wrong username or password";
-						return;
-					}
-					else{
-						id("check").textContent=check;
-						return;
-					}
-				}
-			}
-			ajax.open("POST","register.php");
-			ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-			ajax.send("username="+form.username.value+"&password="+form.password.value);		
-		}
-	</script>
-</head>
-<body>
-	<form>
-	<fieldset>
-	<legend>register</legend>
-	username:<input type="text" name="username" /><sapn id="note1"></sapn><br />
-	password:<input type="password" name="password" value=""/><span id="note2"></span><br />
-	checkpassword:<input type="password" name="chkpasswd" value="" onblur="checkpw(this.form)" /><span id="note3"></span><br />
-	<input type="button" value="sent" onclick="register(this.form)" />
-	<p id="check"></p>
-	</fieldset>
-	</form>
-	<a href="login.html">Back</a>
-	<a href="index.html">index</a>
-</body>
+  <head>
+    <title>Say hello using the People API</title>
+    <meta charset='utf-8' />
+  </head>
+  <body>
+    <p>Say hello using the People API.</p>
+
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="authorize-button" style="display: none;">Authorize</button>
+    <button id="signout-button" style="display: none;">Sign Out</button>
+
+    <div id="content"></div>
+
+    <script type="text/javascript">
+      // Enter an API key from the Google API Console:
+      //   https://console.developers.google.com/apis/credentials
+      var apiKey = 'YOUR_API_KEY';
+      // Enter the API Discovery Docs that describes the APIs you want to
+      // access. In this example, we are accessing the People API, so we load
+      // Discovery Doc found here: https://developers.google.com/people/api/rest/
+      var discoveryDocs = ["https://people.googleapis.com/$discovery/rest?version=v1"];
+      // Enter a client ID for a web application from the Google API Console:
+      //   https://console.developers.google.com/apis/credentials?project=_
+      // In your API Console project, add a JavaScript origin that corresponds
+      //   to the domain where you will be running the script.
+      var clientId = 'YOUR_WEB_CLIENT_ID.apps.googleusercontent.com';
+      // Enter one or more authorization scopes. Refer to the documentation for
+      // the API or https://developers.google.com/people/v1/how-tos/authorizing
+      // for details.
+      var scopes = 'profile';
+      var authorizeButton = document.getElementById('authorize-button');
+      var signoutButton = document.getElementById('signout-button');
+      function handleClientLoad() {
+        // Load the API client and auth2 library
+        gapi.load('client:auth2', initClient);
+      }
+      function initClient() {
+        gapi.client.init({
+            apiKey: apiKey,
+            discoveryDocs: discoveryDocs,
+            clientId: clientId,
+            scope: scopes
+        }).then(function () {
+          // Listen for sign-in state changes.
+          gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+          // Handle the initial sign-in state.
+          updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+          authorizeButton.onclick = handleAuthClick;
+          signoutButton.onclick = handleSignoutClick;
+        });
+      }
+      function updateSigninStatus(isSignedIn) {
+        if (isSignedIn) {
+          authorizeButton.style.display = 'none';
+          signoutButton.style.display = 'block';
+          makeApiCall();
+        } else {
+          authorizeButton.style.display = 'block';
+          signoutButton.style.display = 'none';
+        }
+      }
+      function handleAuthClick(event) {
+        gapi.auth2.getAuthInstance().signIn();
+      }
+      function handleSignoutClick(event) {
+        gapi.auth2.getAuthInstance().signOut();
+      }
+      // Load the API and make an API call.  Display the results on the screen.
+      function makeApiCall() {
+        gapi.client.people.people.get({
+          'resourceName': 'people/me',
+          'requestMask.includeField': 'person.names'
+        }).then(function(resp) {
+          var p = document.createElement('p');
+          var name = resp.result.names[0].givenName;
+          p.appendChild(document.createTextNode('Hello, '+name+'!'));
+          document.getElementById('content').appendChild(p);
+        });
+      }
+    </script>
+    <script async defer src="https://apis.google.com/js/api.js" 
+      onload="this.onload=function(){};handleClientLoad()" 
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+  </body>
 </html>
