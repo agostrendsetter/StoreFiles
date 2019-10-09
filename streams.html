@@ -1,9 +1,46 @@
-<!dotype html>
+<!doctype html>
 <html>
 <title>Agos Trendsetter</title>
 <meta charset="UTF8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  }
+.grid > article {
+  border: 1px solid rgb(176, 184, 63);
+  box-shadow: 10px 10px 10px 10px  rgba(245, 189, 4, 0.3);
+}
+.grid > article img {
+  max-width: 100%;
+}
+.text {
+  padding: 0 20px 20px;
+}
+.text > button {
+  background: gray;
+  border: 0;
+  color: rgb(243, 247, 14);
+  padding: 10px;
+  width: 100%;
+  }
+  .grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 50px;
+  align-items: stretch;
+  }
+.grid img {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  max-width: 100%;
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
 
+</style>
 <body>
 <h1>Welcome to Agos Trendsetter</h1> 
 
